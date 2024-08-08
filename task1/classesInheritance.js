@@ -13,21 +13,22 @@ class Person {
     }
   }
   
-  const mirza = new Person("Mirza", 30);
-  console.log(mirza.perkenalan()); // Output: Halo, nama saya Mirza dan saya berumur 30 tahun.
+  const adli = new Person("adli", 16);
+  console.log(adli.perkenalan()); // Output: Halo, nama saya adli dan saya berumur 16 tahun.
+  
   
   // Inheritance
-  class Guru extends Person {
+  class Pelajar extends Person {
     constructor(nama, umur, mataPelajaran) {
       super(nama, umur);
       this.mataPelajaran = mataPelajaran;
     }
   
-    mengajar() {
-      return `Saya mengajar ${this.mataPelajaran}.`;
+    belajar() {
+      return `Saya belajar ${this.mataPelajaran}.`;
     }
   }
   
-  const bapakMirza = new Guru("Mirza", 30, "React JS");
-  console.log(bapakMirza.perkenalan()); // Output: Halo, nama saya Mirza dan saya berumur 30 tahun.
-  console.log(bapakMirza.mengajar());   // Output: Saya mengajar React JS.
+  const muridadli = new Pelajar("adli", 16, "React JS");
+  console.log(muridadli.perkenalan()); // Output: Halo, nama saya adli dan saya berumur 16 tahun.
+  console.log(muridadli.belajar());   // Output: Saya belajar React JS.
